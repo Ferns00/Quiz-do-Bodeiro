@@ -65,8 +65,8 @@ header h1 {
   background-color: rgba(255, 255, 255, 0.9);
   padding: 2rem;
   border-radius: 20px;
-  width: 800px;
-  height: 625px;
+  width: 650px;
+  height: 350px;
   text-align: center;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(4px);
@@ -75,7 +75,7 @@ header h1 {
 #introducao h3 {
   font-weight: normal;
   line-height: 1.6;
-  font-size: 1.4rem;
+  font-size: 1.55rem;
   color: #333;
   text-align: justify;
 }
@@ -87,7 +87,7 @@ header h1 {
   padding: 0.8rem 1.6rem;
   border-radius: 8px;
   font-size: 1.1rem;
-  margin-top: 40px;
+  margin-top: 50px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
