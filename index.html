@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz do Bodeiro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+  
+<body> 
+    <header>
+        <h1>Quiz do Bodeiro</h1>
+    </header>
+
+    <section id="introducao" class="ativa">
+        <h1 class="titulo">Quiz do Bodeiro</h1>
+        <div class="quadro">
+        <h3>
+            Eu não sei se você sabe como funciona uma mensagem criptografada, mas enfim o básico é: existe uma mensagem original que foi submetida a uma chave e, após isso, ela fica totalmente alterada e ilegível em primeira instância.
+            <br><br>
+            Seu objetivo é conseguir essa chave, e para isso, existem dois caminhos. O difícil demandaria horas... Como eu sou uma pessoa boa, existe o caminho fácil: Leia o QR code e descubra.
+            <br><br>
+            Você vai passar por um QUIZ. É sua OBRIGAÇÃO acertar todas! Mas se errar, pode tentar de novo. As perguntas são sobre a gente — nada que você não saiba. Boa sorte, beijo!
+        </h3>
+        <br>
+        <button onclick="iniciarQuiz()">Iniciar perguntas</button>
+        </div>
+    </section>
+
+    <main>
+    <div id="mensagem-feedback" class="mensagem-feedback"></div>
+
+    <form action= "/submit" method="post">
+        <section class="pergunta-1 ativa"> 
+            <label> 1 - Essa é a mais fácil de todas eu DÚVIDO que você erre. Qual o primeiro apelido que eu te dei? </label>
+            <div class="opcoes">
+            <br>
+            <input type="radio" id="paty" name="apelido" value="paty">
+            <label for="paty">a) Paty</label><br>
+            <input type="radio" id="meu-bem" name="apelido" value="meu-bem">
+            <label for="meu-bem">b) Meu bem</label><br>
+            <input type="radio" id="sabe-tudo" name="apelido" value="sabe-tudo">
+            <label for="sabe-tudo">c) Sabe tudo</label><br>
+            <input type="radio" id="bela-adormecida" name="apelido" value="bela-adormecida">
+            <label for="bela-adormecida">d) Bela adormecida</label><br>
+            </div>
+            <div class="botoes-e-feedback">
+            <div class="mensagem-feedback" id="mensagem-1"></div>
+            <div class="botoes">
+            <button onclick='valida1()' type="button">próxima ></button>
+            </div>
+            
+            
+        </div>
+        </section>
+        <br>
+        
+        <section class="pergunta-2"> 
+            <label> 2 - Claro que não podia faltar uma pergunta sobre meu curso K K K é claro que não vou fazer uma pergunta específica, CALMA. Qual a matéria que eu mais sofri nesse período. </label>
+            <br>
+            <div class="opcoes">
+            <input type="radio" id="eletronica-de-potencia" name="materia" value="eletronica-de-potencia">
+            <label for="eletronica-de-potencia">a) Eletrônica de Potência</label><br>
+            <input type="radio" id="redes-de-automacao" name="materia" value="redes-de-automacao">
+            <label for="redes-de-automacao">b )Redes de Automação</label><br>
+            <input type="radio" id="controle-automatico" name="materia" value="controle-automatico">
+            <label for="controle-automatico">c) Controle Automático</label><br>
+            <input type="radio" id="estatisca-e-probabilidade" name="materia" value="estatisca-e-probabilidade">
+            <label for="estatisca-e-probabilidade">d) Estatística e Probabilidade</label><br>
+            </div>
+            <div class="botoes-e-feedback">
+            <div class="mensagem-feedback" id="mensagem-2"></div>   
+            <div class="botoes">
+            <button onclick='voltar(1)' type="button">< anterior</button>
+            <button onclick='valida2()' type="button">próxima ></button>
+            </div>
+        </div>
+        </section>
+        <br>
+
+        <section class="pergunta-3"> 
+            <label> 3 - Qual o dia que eu te mandei a primeira mensagem? Ó Ó eu falei sobre isso recente hein...</label>
+            <br>
+            <div class="opcoes">
+            <input type="radio" id=" 08" name="data" value="08/03">
+            <label for="08/03">a) 08/03</label><br>
+            <input type="radio" id="05/03" name="data" value="05/03">
+            <label for="05/03">b) 05/03</label><br>
+            <input type="radio" id="27/02" name="data" value="27/02">
+            <label for="27/02">c) 27/02</label><br>
+            <input type="radio" id="05/04" name="data" value="05/04">
+            <label for="05/04">d) 05/04</label><br>
+            </div>
+            <div class="botoes-e-feedback">
+            <div class="mensagem-feedback" id="mensagem-3"></div>    
+            <div class="botoes">
+            <button onclick='voltar(2)' type="button">< anterior</button>
+            <button onclick='valida3()' type="button">próxima ></button>
+            </div>
+        </div>
+        </section>
+        <br>
+
+        <section class="pergunta-4"> 
+            <label> 4 - Essa aqui tá difícil, é muito específica. Primeira música que eu te mandei quando lembrei de você? (sorte sua que tem alternativa, não ia acertar NUNCA).</label>
+            <br>
+            <div class="opcoes">
+            <input type="radio" id="tim-maia" name="musica" value="tim-maia">
+            <label for="tim-maia">a) Pudera - Tim Maia</label><br>
+            <input type="radio" id="maneva" name="musica" value="maneva">
+            <label for="maneva">b) Luz que me traz paz - Maneva</label><br>
+            <input type="radio" id="jorge-vercillo" name="musica" value="jorge-vercillo">
+            <label for="jorge-vercillo">c) Monalisa - Jorge Vercillo</label><br>
+            <input type="radio" id="paralamas" name="musica" value="paralamas">
+            <label for="paralamas">d) Aonde quer que eu vá - Paralamas do Sucesso</label><br>
+            </div>
+            <div class="botoes-e-feedback">
+            <div class="mensagem-feedback" id="mensagem-4"></div>
+            <div class="botoes">
+            <button onclick='voltar(3)' type="button">< anterior</button>
+            <button onclick='valida4()' type="button">próxima ></button>
+            </div>
+        </div>
+        </section>
+        <br>
+
+        <section class="pergunta-5"> 
+            <label> 5 - Quando eu mandei o convite pra gente sair, como que eu pedi para você confirmar a presença?</label>
+            <br>
+            <div class="opcoes">
+            <input type="radio" id="seco" name="convite" value="seco">
+            <label for="seco">a) Apenas um sim seco (ECA) </label><br>
+            <input type="radio" id="cantando" name="convite" value="cantando">
+            <label for="cantando">b) Cantando sua música preferida</label><br>
+            <input type="radio" id="ligando" name="convite" value="ligando">
+            <label for="ligando">c) Ligando para minha mãe pedindo permissão</label><br>
+            <input type="radio" id="fotinha" name="convite" value="fotinha">
+            <label for="fotinha">d) Com uma fotinha bem bonita</label><br>
+            </div>
+            <div class="botoes-e-feedback">
+            <div class="mensagem-feedback" id="mensagem-5"></div>
+            <div class="botoes">
+            <button onclick='voltar(4)' type="button">< anterior</button>
+            <button onclick='valida5()' type="button">próxima ></button>
+            </div>
+        </div>
+        </section>
+        <br>
+
+        <section class="pergunta-6"> 
+            <label> 6 - Qual o primeiro presente que te dei?</label>
+            <br>
+            <div class="opcoes">
+            <input type="radio" id="livro" name="presente" value="livro">
+            <label for="livro">a) Livro </label><br>
+            <input type="radio" id="flores" name="presente" value="flores">
+            <label for="flores">b) Flores </label><br>
+            <input type="radio" id="palheta" name="presente" value="palheta">
+            <label for="palheta">c) Palheta</label><br>
+            <input type="radio" id="cordão" name="presente" value="cordao">
+            <label for="cordao">d) Cordão do Flamengo (eca)</label><br>
+            </div>
+            <div class="botoes-e-feedback">
+            <div class="mensagem-feedback" id="mensagem-6"></div>
+            <div class="botoes">
+            <button onclick='voltar(5)' type="button">< anterior</button>
+            <button onclick='valida6()' type="button">próxima ></button>
+            </div>
+        </div>
+        </section>
+        <br>
+
+        <section class="pergunta-7"> 
+            <label> 7 - Qual o instrumento que eu toco melhor. PERGUNTA ELIMINATÓRIA...?</label>
+            <br>
+            <div class="opcoes">
+            <input type="radio" id="baixo" name="instrumento" value="baixo">
+            <label for="baixo">a) Baixo </label><br>
+            <input type="radio" id="bateria" name="instrumento" value="bateria">
+            <label for="bateria">b) Bateria </label><br>
+            <input type="radio" id="violao" name="instrumento" value="violao">
+            <label for="violao">c) Violão</label><br>
+            <input type="radio" id="todos" name="instrumento" value="todos">
+            <label for="todos">d) Todos Possíveis??? </label><br>
+            </div>
+            <div class="botoes-e-feedback">
+            <div class="mensagem-feedback" id="mensagem-7"></div>
+            <div class="botoes">
+            <button onclick='voltar(6)' type="button">< anterior</button>
+            <button onclick='valida7()' type="button">próxima ></button>
+            </div>
+        </div>
+        </section>
+        <br>
+
+        <section class="pergunta-8"> 
+            <label> 8 - O que você com certeza não comeria? </label>
+            <br>
+            <div class="opcoes">
+            <input type="radio" id="sushi" name="comida" value="sushi">
+            <label for="sushi">a) Sushi </label><br>
+            <input type="radio" id="bolo" name="comida" value="bolo">
+            <label for="bolo">b) Bolo de chocolate </label><br>
+            <input type="radio" id="churrasco" name="comida" value="churrasco">
+            <label for="churrasco">c) Churrasco</label><br>
+            <input type="radio" id="vegetal" name="comida" value="vegetal">
+            <label for="vegetal">d) Qualquer comida com mais de 3 vegetais misturados(KKKKKK) </label><br>
+            </div>
+            <div class="botoes-e-feedback">
+            <div class="mensagem-feedback" id="mensagem-8"></div>
+            <div class="botoes">
+            <button onclick='voltar(7)' type="button">< anterior</button>
+            <button onclick='valida8()' type="button">próxima ></button>
+            </div>
+        </div>
+        </section>
+        <br>
+
+        <section class="pergunta-9"> 
+            <label> 9 - Qual o NOSSO time de futebol? IMPOSSÍVEL errar</label>
+            <br>
+            <div class="opcoes">
+            <input type="radio" id="flamengo" name="time" value="flamengo">
+            <label for="flamengo">a) Flamengo </label><br>
+            <input type="radio" id="fluminense" name="time" value="fluminense">
+            <label for="fluminense">b) FLUMINENSE </label><br>
+            <input type="radio" id="vasco" name="time" value="vasco">
+            <label for="vasco">c) Vasco</label><br>
+            </div>
+            <div class="botoes-e-feedback">
+            <div class="mensagem-feedback" id="mensagem-9"></div>
+            <div class="botoes">
+            <button onclick='voltar(8)' type="button">< anterior</button>
+            <button onclick='valida9()' type="button">próxima ></button>
+            </div>
+        </div>
+        </section>
+        <br>
+
+        <section class="pergunta-10"> 
+            <label> 10 - Bem, chegamos a última pergunta do quiz, eu disse que seria fácil. Qual a qualidade que eu mais admiro em você?</label>
+            <br>
+            <div class="opcoes">
+            <input type="radio" id="servir" name="qualidade" value="servir">
+            <label for="servir">a) Paixão por servir </label><br>
+            <input type="radio" id="beleza" name="qualidade" value="beleza">
+            <label for="beleza">b) Beleza </label><br>
+            <input type="radio" id="comunicacao" name="qualidade" value="comunicacao">
+            <label for="comunicacao">c) Comunicação</label><br>
+            <input type="radio" id="forca" name="qualidade" value="forca">
+            <label for="forca">d) Sua força </label><br>
+            </div>
+            <div class="botoes-e-feedback">
+            <div class="mensagem-feedback" id="mensagem-10"></div>
+            <div class="botoes">
+            <button onclick='voltar(9)' type="button">< anterior</button>
+            <button onclick='valida10()' type="button">próxima ></button>
+            </div>
+        </div>
+        </section>
+
+    </form>  
+        <section class="decodificador" style="display: none;">
+        <h3>
+            Você desbloqueou a mensagem criptografada!  
+            <br><br>
+            <strong>Mensagem criptografada:</strong> <code>FRQYLWH PRULDK</code>
+            <br><br>
+            Digite a chave numérica para decodificar:
+        </h3>
+        <div> (dica: talvez seja o nº 3)</div>
+        <input type="number" id="chave" placeholder="Ex: 3" />
+        <br><br>
+        <button onclick="decodificar()">Decodificar</button>
+        <br><br>
+        <div id="mensagem-decodificada" style="font-size: 1.2rem; font-weight: bold; margin-top: 1rem;"></div>
+        </section>
+
+    
+    </main>
+
+    <script src= "script.js"></script>
+</body>
+</html>
+

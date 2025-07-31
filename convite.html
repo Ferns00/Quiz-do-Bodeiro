@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Convite Moriah</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <h1>Convite Moriah</h1>
+    </header>
+  <main>
+    
+    <section class="convite-final">
+      <h3 class="local" style="text-align: justify; font-size: 1.6rem;">
+        Oi, meu bem!
+        Se você está lendo isso, é porque provavelmente conseguiu desvendar tudo direitinho. Menina esperta, como sempre. 🎉✨
+        <br><br>
+        Mas calma, não é só um “parabéns” que te espera aqui. Isso, na verdade, é um convite — simples e direto, mas cheio de carinho:
+        <br><br>
+        <strong>Local:</strong> Moriah  
+        <br>
+        <strong>Dia:</strong> 02/08/2025  
+        <br>
+        <strong>Vestimenta:</strong> Preto com Branco  
+        <br>
+        <strong>Te espero às 16h</strong>
+      </h3>
+    </section>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script>
+    // Roda o confete assim que a página carregar
+    window.onload = () => {
+      confetti({
+        particleCount: 250,
+        spread: 120,
+        origin: { y: 0.6 }
+      });
+    };
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
