@@ -176,7 +176,7 @@ function valida10() {
         mensagem.style.padding = "20px";
         mensagem.style.fontSize = "1.2rem";
 
-        if (acertos === 9) {
+        if (acertos >= 9) {
           mensagem.innerHTML = `
             <p>✨ Você acertou todas as perguntas! Acesso concedido à mensagem criptografada abaixo. ✨</p>
           `;
